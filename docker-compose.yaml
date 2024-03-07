@@ -2,6 +2,6 @@ version: '3.9'
 
 services:
   web:
-    image: "ashu2903/nodeapp:latest"
+    image: "nodeapp:latest"
     ports:
       - "8000:8000"
