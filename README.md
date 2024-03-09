@@ -11,7 +11,7 @@ Follow these steps to run the project locally:
 
 Clone the repository:
 
-git clone https://github.com/theyashsisodiya/node-todo-cicd.git
+git clone https://github.com/nangareashu29/node-todo-cicd.git
 Navigate to the project directory:
 
 cd node-todo-cicd
@@ -21,7 +21,6 @@ npm install
 Run the application:
 
 node app.js
-The application will be accessible at http://localhost:8000/todo.
 
 CI/CD with Jenkins
 This project includes CI/CD pipelines implemented using Jenkins. The Jenkins job is triggered automatically through a webhook whenever changes are pushed to the repository.
