@@ -12,7 +12,7 @@ pipeline {
         }
         stage("Build"){
             steps{
-                sh 'docker build -t nodeapp:latest .'
+                sh 'docker build -t node-app-batch-6:latest .'
                 echo "Code Built Successfully"
             }
         }
@@ -25,8 +25,8 @@ pipeline {
             steps{
                 withCredentials([usernamePassword(credentialsId:"dockercred",passwordVariable:"dockerPass",usernameVariable:"dockerUser")]){
                 sh "docker login -u ${env.dockerUser} -p ${env.dockerPass}"
-                sh "docker tag nodeapp:latest ${env.dockerUser}/nodeapp:latest"
-                sh "docker push ${env.dockerUser}/nodeapp:latest"
+                sh "docker tag node-app-batch-6:latest ${env.dockerUser}/node-app-batch-6:latest"
+                sh "docker push ${env.dockerUser}/node-app-batch-6:latest"
                 }
                 
             }
